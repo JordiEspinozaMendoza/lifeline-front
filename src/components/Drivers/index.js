@@ -1,11 +1,42 @@
 import React from 'react'
 import "./styles.sass"
 import axios from 'axios'
+import { useReducer } from 'react'
+import { reducer } from './reducer'
+import { actions } from './reducer/actions'
+import { initialState } from './reducer/constants'
+import { petition } from '../../petition'
 
 export const Drivers = () => {
-
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    dispatch({
+      type: actions.UPDATE_FORM,
+      payload: {
+        name,
+        value,
+      },
+    });
+  };
   const handleSubmit = (e) => {
-
+    e.preventDefault()
+    // axios.post(`https://lifeline-hack.herokuapp.com/api/driver/`, (state.formData))
+    //   .then(res => {
+    //     console.log(res)
+    //     console.log(res.data)
+    //   })
+    petition({
+      url: `driver/` ,
+      method: "POST",
+      body: state.formData,
+      constants: {
+        REQUEST: actions.SUBMIT_FORM_REQUEST,
+        SUCCESS: actions.SUBMIT_FORM_SUCCESS,
+        FAIL: actions.SUBMIT_FORM_FAILURE
+      },
+      dispatch: dispatch,
+    })
   }
   return (
     <div className='drivers__'>
@@ -16,21 +47,17 @@ export const Drivers = () => {
       </div>
       <div className='drivers__right'>
         <form className='drivers__form' onSubmit={handleSubmit}>
-          <label htmlFor='IdDriver'>
+          {/* <label htmlFor='_id' >
             Driver's ID
-            <input type='text' id='IdDriver' name='IdDriver'/>
-          </label>
-          <label htmlFor='Name'>
+            <input type='text' id='_id' name='_id' onChange={handleChange}/>
+          </label> */}
+          <label htmlFor='name'>
             Driver's Name
-            <input type='text' id='Name' name='Name'/>
+            <input type='text' id='name' name='name' onChange={handleChange}/> 
           </label>
-          <label htmlFor='email'>
-            Driver's Email
-            <input type='text' id='email' name='email'/>
-          </label>
-          <label htmlFor='Phone'>
-            Driver's Phone
-            <input type='number' id='Phone' name='Phone'/>
+          <label htmlFor='lastName'>
+            Driver's LastName
+            <input type='text' id='lastName' name='lastName' onChange={handleChange}/>
           </label>
           <button type='submit'>
             Submit
