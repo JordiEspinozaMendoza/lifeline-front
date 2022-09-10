@@ -1,7 +1,12 @@
 import React from 'react'
 import "./styles.sass"
+import axios from 'axios'
 
 export const Drivers = () => {
+
+  const handleSubmit = (e) => {
+
+  }
   return (
     <div className='drivers__'>
       <div className='drivers__left'>
@@ -10,7 +15,7 @@ export const Drivers = () => {
         <button>Ambulances</button>
       </div>
       <div className='drivers__right'>
-        <form className='drivers__form'>
+        <form className='drivers__form' onSubmit={handleSubmit}>
           <label htmlFor='IdDriver'>
             Driver's ID
             <input type='text' id='IdDriver' name='IdDriver'/>
@@ -27,7 +32,7 @@ export const Drivers = () => {
             Driver's Phone
             <input type='number' id='Phone' name='Phone'/>
           </label>
-          <button>
+          <button type='submit'>
             Submit
           </button>
         </form>

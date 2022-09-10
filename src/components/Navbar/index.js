@@ -13,9 +13,9 @@ export const Navbar = () => {
             <li>
                 <Link to="/drivers"> Drivers </Link>
             </li>
-            {/* <li>
+            <li>
                 <Link to="/prueba"> prueba </Link>
-            </li> */}
+            </li>
         </ul>
     </div>
   )
