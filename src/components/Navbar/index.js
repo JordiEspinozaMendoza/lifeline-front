@@ -20,7 +20,7 @@ export const Navbar = () => {
             <Link to="/drivers">
             <button > Conductores </button></Link>
 
-            <Link to="/Check">
+            <Link to="/check">
             <button > Check </button></Link>
         </div>
     </div>
