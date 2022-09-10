@@ -1,7 +1,7 @@
 import React from 'react'
 import "./styles.sass"
 import axios from 'axios'
-
+import { Home } from '../Home'
 export const Drivers = () => {
 
   const handleSubmit = (e) => {
@@ -10,9 +10,7 @@ export const Drivers = () => {
   return (
     <div className='drivers__'>
       <div className='drivers__left'>
-        <h2>Alta deconductores</h2>
-        <button>Return</button>
-        <button>Ambulances</button>
+        <h3 > Registration of drivers </h3>
       </div>
       <div className='drivers__right'>
         <form className='drivers__form' onSubmit={handleSubmit}>
@@ -25,18 +23,18 @@ export const Drivers = () => {
             <input type='text' id='Name' name='Name'/>
           </label>
           <label htmlFor='email'>
-            Driver's Email
-            <input type='text' id='email' name='email'/>
-          </label>
-          <label htmlFor='Phone'>
-            Driver's Phone
-            <input type='number' id='Phone' name='Phone'/>
+            Driver's LastName
+            <input type='text' id='LastName' name='LastName'/>
           </label>
           <button type='submit'>
             Submit
           </button>
         </form>
       </div>
+      <div class="Home">
+        <Home/>
+      </div>
+    
     </div>
   )
 }
