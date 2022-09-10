@@ -1,32 +1,50 @@
 .Nav
     display: flex
+    justify-content: space-between
     .Titulo
-        width: 500px
+        width: 1000px
         font-size: 50px
         font-family: 'Roboto', sans-serif	
         font-weight: 700
         color: #448ccc
         margin-top: 10px
         margin-bottom: 10px 
-    .Ambu
-        background: #448ccc
         
-        border: none
-        border-radius: 5px
-        padding: 5px
-        margin: 5px
-        a
+    .Botones
+
+        display: flex
+        color: red
+        .Ambu
+            background: #448ccc
+            border: 1px solid white
+            width: 125px
+            height: 75px
+            border: none
+            border-radius: 5px
+            padding: 5px
+            margin: 5px
+            &:hover
+                background: #00008B
+                transition: all 200ms ease-in-out
+            a
             color: white
             text-decoration: none
-        
-    .Condu
-        background: #448ccc
-        border: none
-        border-radius: 5px
-        padding: 5px
-        margin: 5px
-        a
+            cursor: pointer
+
+        .Condu
+            background: #448ccc
+            width: 125px
+            height: 75px
+            border: none
+            border-radius: 5px
+            padding: 5px
+            margin: 5px
+            &:hover
+                background: #00008B
+                transition: all 200ms ease-in-out
+            a
             color: white
             text-decoration: none
+            cursor: pointer
 
     

@@ -6,17 +6,17 @@ import "./styles.sass"
 export const Navbar = () => {
   return (
     <div className='Nav'>
-       <div class="Titulo">
-        Lifeline
+       <div>
+        <a class="Titulo" href="/"> Lifeline</a>
         </div>
-
-        <button className="Ambu">
-          <Link to="/ambulances"> Ambulancias </Link>
-        </button>
-        {/* (a) es link */}
-        <button className="Condu">
-          <Link to="/drivers"> Conductores </Link>
-        </button>
+        <div class="Botones">
+            <Link to="/ambulances"> 
+            <button className="Ambu"> Ambulancias</button> </Link>
+          
+          {/* (a) es link */}
+            <Link to="/drivers">
+            <button className="Condu"> Conductores </button></Link>
+        </div>
     </div>
   )
 }
