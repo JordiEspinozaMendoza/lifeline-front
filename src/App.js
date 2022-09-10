@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Navbar} from "./components/Navbar"
+import {Navbar2} from "./components/Navbar2"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
 import {Check} from "./components/Check"
@@ -10,16 +11,14 @@ import {Home} from "./components/Home"
 function App() {
 
   return (
-    
       <div class="Todo">
       <Router>
-      <Navbar/>
       <hr class="Linea"/>
+      <Navbar/>
         <Switch>
           <Route exact path="/"> <Home/> </Route>
-          <Route exact path="/ambulances">
-            <Ambulances/>
-          </Route>
+
+          <Route exact path="/ambulances"> <Ambulances/> </Route>
           <Route exact path="/drivers">
             <Drivers/>
           </Route>
@@ -31,7 +30,6 @@ function App() {
           </Route>
         </Switch>
       </Router>
-
     </div>
   );
 }

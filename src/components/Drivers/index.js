@@ -9,6 +9,7 @@ export const Drivers = () => {
   }
   return (
     <div className='drivers__'>
+
       <div className='drivers__left'>
         <h3 > Registration of drivers </h3>
       </div>
@@ -31,10 +32,6 @@ export const Drivers = () => {
           </button>
         </form>
       </div>
-      <div class="Home">
-        <Home/>
-      </div>
-    
     </div>
   )
 }

@@ -1,27 +1,30 @@
 .Home
     display: flex
-    justify-content: space-between
+    justify-content: center
+    align-items: center
 
     .Botones
         display: flex
         flex-direction: column
-        padding: 5px
-        margin: center
-        
+        a
+            color: white
+            text-decoration: none
         button
-            background: #448ccc
-            border: 1px solid white
-            width: 125px
-            height: 75px
+            border-radius: 1rem
+            display: flex
+            justify-content: center
+            background-color: #448ccc
+            padding: 50px
+            margin: 10px
             border: none
-            border-radius: 5px
-            padding: 5px
-            margin: 5px
+            width: 500px
+            font-size: 25px
+            padding: 0 auto
+            color: white
+            cursor: pointer
+           
             &:hover
                 background: #00008B
                 transition: all 200ms ease-in-out
-            a
-            color: white
-            text-decoration: none
-            cursor: pointer
+                
 
