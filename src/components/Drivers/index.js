@@ -40,6 +40,7 @@ export const Drivers = () => {
   }
   return (
     <div className='drivers__'>
+
       <div className='drivers__left'>
         <h2>Alta deconductores</h2>
         <button>Return</button>

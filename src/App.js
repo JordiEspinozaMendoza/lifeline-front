@@ -1,5 +1,6 @@
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Navbar} from "./components/Navbar"
+import {Navbar2} from "./components/Navbar2"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
 import {Prueba} from "./components/Prueba"
@@ -7,6 +8,7 @@ import {Home} from "./components/Home"
 import {Check} from "./components/Check"
 import {useEffect} from 'react'
 
+<<<<<<< HEAD
 
 function App() {
   // const showNav = window.location.pathname === "/" ? true : false;
@@ -23,6 +25,17 @@ function App() {
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>
+=======
+  return (
+      <div class="Todo">
+      <Router>
+      <hr class="Linea"/>
+      <Navbar/>
+        <Switch>
+          <Route exact path="/"> <Home/> </Route>
+
+          <Route exact path="/ambulances"> <Ambulances/> </Route>
+>>>>>>> Parte-Juan
           <Route exact path="/drivers">
             <Drivers/>
           </Route>
@@ -59,7 +72,6 @@ function App() {
           </Route> */}
         </Switch>
       </Router>
-
     </div>
   );
 }
