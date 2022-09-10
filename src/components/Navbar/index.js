@@ -7,11 +7,11 @@ export const Navbar = () => {
     <div className='Nav'>
         <ul>
             <li>
-              <Link to="/ambulances"> Ambulancias </Link>
+              <Link to="/ambulances"> Ambulances </Link>
                 
             </li>
             <li>
-                <Link to="/drivers"> Conductores </Link>
+                <Link to="/drivers"> Drivers </Link>
             </li>
             {/* <li>
                 <Link to="/prueba"> prueba </Link>
