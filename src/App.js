@@ -2,21 +2,24 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Navbar} from "./components/Navbar"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
-import {Check} from "./components/Check"
-import './App.css';
-import {prueba} from "./components/prueba"
-import React from 'react'
+import {Prueba} from "./components/Prueba"
 import {Home} from "./components/Home"
-function App() {
+import {Check} from "./components/Check"
+import {useEffect} from 'react'
 
-  return (
-    
-      <div class="Todo">
-      <Router>
-      <Navbar/>
-      <hr class="Linea"/>
-        <Switch>
-          <Route exact path="/"> <Home/> </Route>
+
+function App() {
+  // const showNav = window.location.pathname === "/" ? true : false;
+  // console.log(showNav)
+
+  // function returnNav(isNeeded) {
+  //   if (!isNeeded)
+  //     return(<Navbar/>)
+  // }
+  const defaultContainer= () => {
+    return(
+      <div>
+        <Navbar/>
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>
@@ -24,11 +27,36 @@ function App() {
             <Drivers/>
           </Route>
           <Route exact path="/prueba">
-            <prueba/>
+            <Prueba/>
           </Route>
           <Route exact path="/check">
             <Check/>
           </Route>
+      </div>
+    )
+  }
+  return (
+    <div>
+      <Router>
+        
+        <Switch>
+          <Route exact path="/">
+            <Home/>
+          </Route>
+          <Route component={defaultContainer}/>
+          {/* <Navbar/>
+          <Route exact path="/ambulances">
+            <Ambulances/>
+          </Route>
+          <Route exact path="/drivers">
+            <Drivers/>
+          </Route>
+          <Route exact path="/prueba">
+            <Prueba/>
+          </Route>
+          <Route exact path="/check">
+            <Check/>
+          </Route> */}
         </Switch>
       </Router>
 
