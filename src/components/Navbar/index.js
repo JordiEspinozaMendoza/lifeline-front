@@ -13,6 +13,9 @@ export const Navbar = () => {
             <li>
                 <Link to="/drivers"> Conductores </Link>
             </li>
+            {/* <li>
+                <Link to="/prueba"> prueba </Link>
+            </li> */}
         </ul>
     </div>
   )
