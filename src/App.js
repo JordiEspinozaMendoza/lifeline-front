@@ -2,17 +2,21 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import {Navbar} from "./components/Navbar"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
-import {Prueba} from "./components/Prueba"
-import {useEffect} from 'react'
-
+import {Check} from "./components/Check"
+import './App.css';
+import {prueba} from "./components/prueba"
+import React from 'react'
+import {Home} from "./components/Home"
 function App() {
 
-  
   return (
-    <div>
+    
+      <div class="Todo">
       <Router>
       <Navbar/>
+      <hr class="Linea"/>
         <Switch>
+          <Route exact path="/"> <Home/> </Route>
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>
@@ -20,7 +24,10 @@ function App() {
             <Drivers/>
           </Route>
           <Route exact path="/prueba">
-            <Prueba/>
+            <prueba/>
+          </Route>
+          <Route exact path="/check">
+            <Check/>
           </Route>
         </Switch>
       </Router>

@@ -47,10 +47,6 @@ export const Drivers = () => {
       </div>
       <div className='drivers__right'>
         <form className='drivers__form' onSubmit={handleSubmit}>
-          {/* <label htmlFor='_id' >
-            Driver's ID
-            <input type='text' id='_id' name='_id' onChange={handleChange}/>
-          </label> */}
           <label htmlFor='name'>
             Driver's Name
             <input type='text' id='name' name='name' onChange={handleChange}/> 
