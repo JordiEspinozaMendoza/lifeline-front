@@ -5,6 +5,8 @@ import {Drivers} from "./components/Drivers"
 import './App.css';
 
 function App() {
+
+  
   return (
     
       <div class="Todo">
@@ -17,6 +19,9 @@ function App() {
           </Route>
           <Route exact path="/drivers">
             <Drivers/>
+          </Route>
+          <Route exact path="/prueba">
+            <Prueba/>
           </Route>
         </Switch>
       </Router>
