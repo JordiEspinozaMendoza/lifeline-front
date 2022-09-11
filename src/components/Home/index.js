@@ -14,6 +14,9 @@ export const Home = () => {
 
             <Link to="/check">
             <button > Check </button></Link>
+
+            <Link to="/ambulances/active">
+            <button > Active ambulances </button></Link>
         </div>
     </div>
   );

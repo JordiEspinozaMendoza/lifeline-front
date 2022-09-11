@@ -1,14 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./styles.sass"
-
+import Lifeline from "./Lifeline.png"
 export const Navbar2 = () => {
-
+ 
   return (
     <div className='Nav2'>
-       <div>
-        <a class="Titulo" href="/"> Lifeline</a>
-        </div>
+      <img class="Logo"src={Lifeline} alt="" />
+        <a class="Titulo2" href="/"> Lifeline</a>
+        <hr/>
     </div>
   )
 }

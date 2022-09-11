@@ -6,14 +6,25 @@ import {Drivers} from "./components/Drivers"
 import {Prueba} from "./components/Prueba"
 import {Home} from "./components/Home"
 import {Check} from "./components/Check"
+import { ActiveAmbulances } from './components/ActiveAmbuances'
 import {useEffect} from 'react'
+import "./App.css"
 
 
 function App() {
+  
+  // const showNav = window.location.pathname === "/" ? true : false;
+  // console.log(showNav)
+
+  // function returnNav(isNeeded) {
+  //   if (!isNeeded)
+  //     return(<Navbar/>)
+  // }
   const defaultContainer= () => {
     return(
       <div>
         <Navbar/>
+        <hr className='Linea'/>
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>
@@ -26,13 +37,15 @@ function App() {
           <Route exact path="/check">
             <Check/>
           </Route>
+          <Route exact path="/ambulances/active">
+            <ActiveAmbulances/>
+          </Route>
       </div>
     )
   }
   return (
     <div>
       <Router>
-        
         <Switch>
           <Route exact path="/">
             <Navbar2/>

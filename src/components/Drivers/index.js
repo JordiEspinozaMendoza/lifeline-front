@@ -42,19 +42,17 @@ export const Drivers = () => {
     <div className='drivers__'>
 
       <div className='drivers__left'>
-        <h2>Alta deconductores</h2>
-        <button>Return</button>
-        <button>Ambulances</button>
+        <h2> Registration of drivers </h2>
       </div>
       <div className='drivers__right'>
         <form className='drivers__form' onSubmit={handleSubmit}>
           <label htmlFor='name'>
             Driver's Name
-            <input type='text' id='name' name='name' onChange={handleChange}/> 
+            <input type='text' id='name' name='name' placeholder='Example: "Michael"'onChange={handleChange}/> 
           </label>
           <label htmlFor='lastName'>
             Driver's LastName
-            <input type='text' id='lastName' name='lastName' onChange={handleChange}/>
+            <input type='text' id='lastName' name='lastName'placeholder='Example: "Scott"' onChange={handleChange}/>
           </label>
           <button type='submit'>
             Submit
