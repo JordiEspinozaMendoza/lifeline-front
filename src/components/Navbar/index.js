@@ -9,7 +9,7 @@ export const Navbar = () => {
     <div className='Nav'>
       <div className="LogoI">
             <img class="Logo"src={Lifeline} alt="" />
-            <a class="Titulo" href="/">Lifeline </a>
+            <a class="Titulo" href="/"> Lifeline </a>
         </div>
 
         <div class="BotonesNav">

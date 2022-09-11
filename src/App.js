@@ -45,6 +45,7 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Navbar2/>
+            <hr className='Linea'/>
             <Home/>
           </Route>
           <Route component={defaultContainer}/>

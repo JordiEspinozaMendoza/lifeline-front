@@ -48,11 +48,11 @@ export const Drivers = () => {
         <form className='drivers__form' onSubmit={handleSubmit}>
           <label htmlFor='name'>
             Driver's Name
-            <input type='text' id='name' name='name' placeholder="Michael"onChange={handleChange}/> 
+            <input type='text' id='name' name='name' placeholder="p. ej: Marcus"onChange={handleChange}/> 
           </label>
           <label htmlFor='lastName'>
             Driver's LastName
-            <input type='text' id='lastName' name='lastName'placeholder='Scott' onChange={handleChange}/>
+            <input type='text' id='lastName' name='lastName'placeholder='p.ej: Johnson' onChange={handleChange}/>
           </label>
           <button type='submit'>
             Submit
