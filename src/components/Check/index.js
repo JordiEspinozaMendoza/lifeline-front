@@ -22,6 +22,7 @@ export const Check = () => {
           })
     },[])
     var auxAmbulance = state.getAmbulance.data
+    console.log(auxAmbulance)
     return (
         <div className="Cuerpo">
             <h1>Check</h1>
@@ -37,7 +38,7 @@ export const Check = () => {
                         return(
                             <tr>
                                 <td>{e.plate}</td>                                 
-                                <td>{e.drivers === null ? "N/A" : e.drivers[0]['driver']['name'] }</td>
+                                <td>{e.driver === null ? "N/A" : e.driver[0]['name']}</td>
                             </tr>
                         )
                     }) : null}

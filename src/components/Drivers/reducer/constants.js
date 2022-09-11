@@ -1,7 +1,8 @@
 export const initialState = {
     formData: {
         name:"",
-        lastName:""
+        lastName:"",
+        phone:0
     },
     submitForm: {
         loading: false,

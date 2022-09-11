@@ -38,6 +38,7 @@ export const Drivers = () => {
       dispatch: dispatch,
     })
   }
+  console.log(state)
   return (
     <div className='drivers__'>
 
@@ -53,6 +54,10 @@ export const Drivers = () => {
           <label htmlFor='lastName'>
             Driver's LastName
             <input type='text' id='lastName' name='lastName'placeholder='Example: "Scott"' onChange={handleChange}/>
+          </label>
+          <label htmlFor='phone'>
+            Driver's Phone
+            <input type='text' id='phone' name='phone'placeholder='Example: "(664) 845 9871"' onChange={handleChange}/>
           </label>
           <button type='submit'>
             Submit
