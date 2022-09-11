@@ -3,13 +3,15 @@ import {Navbar} from "./components/Navbar"
 import {Navbar2} from "./components/Navbar2"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
-import {Prueba} from "./components/Prueba"
+import {Prueba} from "./components/prueba"
 import {Home} from "./components/Home"
 import {Check} from "./components/Check"
 import {useEffect} from 'react'
+import "./App.css"
 
 
 function App() {
+  
   // const showNav = window.location.pathname === "/" ? true : false;
   // console.log(showNav)
 
@@ -21,6 +23,7 @@ function App() {
     return(
       <div>
         <Navbar/>
+        <hr className='Linea'/>
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>
@@ -39,9 +42,9 @@ function App() {
   return (
     <div>
       <Router>
-        
         <Switch>
           <Route exact path="/">
+            <Navbar2/>
             <Home/>
           </Route>
           <Route component={defaultContainer}/>
