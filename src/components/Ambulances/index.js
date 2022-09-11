@@ -2,6 +2,7 @@ import React from 'react'
 import {useState } from 'react'
 import './styles.sass'
 import axios from 'axios'
+import petition from "./../../petition"
 
 export const Ambulances = () => {
   

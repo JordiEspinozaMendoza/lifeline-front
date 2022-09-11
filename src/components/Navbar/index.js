@@ -4,8 +4,6 @@ import "./styles.sass"
 import { useLocation } from 'react-router-dom'
 
 export const Navbar = () => {
- 
-  console.log(window.location.pathname)
 
   return (
     <div className='Nav'>

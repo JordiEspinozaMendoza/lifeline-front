@@ -1,42 +1,49 @@
 import React from "react";
 import'./styles.sass'
-import { useState } from "react";
-
+import { useState, useReducer, useEffect } from "react";
+import { reducer } from "./reducer";
+import { actions } from "./reducer/actions";
+import { initialState } from "./reducer/constants";
+import { petition } from "../../petition";
 
 export const Check = () => {
-    
-    
+    const [state, dispatch] = useReducer(reducer, initialState)
+    useEffect(() => {
+        petition({
+            url: `ambulance/` ,
+            method: "GET",
+            body: null,
+            constants: {
+              REQUEST: actions.GET_AMBULANCE_REQUEST,
+              SUCCESS: actions.GET_AMBULANCE_SUCCESS,
+              FAIL: actions.GET_AMBULANCE_FAILURE
+            },
+            dispatch: dispatch,
+          })
+    },[])
+    var auxAmbulance = state.getAmbulance.data
     return (
-        <div class="Cuerpo">
-        <h1>Check</h1>
-        
-        <div class="tabla">
-            <form class="tabla_form">
-            <table>
-            <tr>
-                <th> Ambulance Plate</th>
-                <th> Driver's Name</th>
-            </tr>
-            {/* Aqui van a ir las ambulancias dependiendo de cuantas se dan de alta */}
+        <div className="Cuerpo">
+            <h1>Check</h1>
+            <table className="styled-table">
+                <thead>
+                    <tr>
+                        <th>Ambulance plates</th>
+                        <th>Ambulance drivers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {Array.isArray(auxAmbulance) ? (auxAmbulance).map(e => {
+                        return(
+                            <tr>
+                                <td>{e.plate}</td>                                 
+                                <td>{e.drivers === null ? "N/A" : e.drivers[0]['driver']['name'] }</td>
+                            </tr>
+                        )
+                    }) : null}
 
-            <tr>
-                <td> 1234</td>
-                <td> Juan</td> 
-            </tr>
-            <tr>
-                <td> 5678</td>
-                <td> Pedro</td>
-            </tr>
-             </table>
-             </form>
-        </div>
-
-
-
-
-
-
-
+                </tbody>
+        </table>
         </div>
     );
 

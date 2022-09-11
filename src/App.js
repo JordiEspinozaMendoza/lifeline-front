@@ -8,16 +8,8 @@ import {Home} from "./components/Home"
 import {Check} from "./components/Check"
 import {useEffect} from 'react'
 
-<<<<<<< HEAD
 
 function App() {
-  // const showNav = window.location.pathname === "/" ? true : false;
-  // console.log(showNav)
-
-  // function returnNav(isNeeded) {
-  //   if (!isNeeded)
-  //     return(<Navbar/>)
-  // }
   const defaultContainer= () => {
     return(
       <div>
@@ -25,17 +17,6 @@ function App() {
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>
-=======
-  return (
-      <div class="Todo">
-      <Router>
-      <hr class="Linea"/>
-      <Navbar/>
-        <Switch>
-          <Route exact path="/"> <Home/> </Route>
-
-          <Route exact path="/ambulances"> <Ambulances/> </Route>
->>>>>>> Parte-Juan
           <Route exact path="/drivers">
             <Drivers/>
           </Route>
@@ -54,22 +35,10 @@ function App() {
         
         <Switch>
           <Route exact path="/">
+            <Navbar2/>
             <Home/>
           </Route>
           <Route component={defaultContainer}/>
-          {/* <Navbar/>
-          <Route exact path="/ambulances">
-            <Ambulances/>
-          </Route>
-          <Route exact path="/drivers">
-            <Drivers/>
-          </Route>
-          <Route exact path="/prueba">
-            <Prueba/>
-          </Route>
-          <Route exact path="/check">
-            <Check/>
-          </Route> */}
         </Switch>
       </Router>
     </div>
