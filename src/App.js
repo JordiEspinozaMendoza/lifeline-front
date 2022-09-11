@@ -4,6 +4,7 @@ import {Navbar2} from "./components/Navbar2"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
 import {Prueba} from "./components/Prueba"
+import {Profile} from "./components/Profile"
 import {Home} from "./components/Home"
 import {Check} from "./components/Check"
 import { ActiveAmbulances } from './components/ActiveAmbuances'
@@ -25,6 +26,9 @@ function App() {
       <div>
         <Navbar/>
         <hr className='Linea'/>
+        <Route exact path="/Profile">
+            <Profile/>
+          </Route>
           <Route exact path="/ambulances">
             <Ambulances/>
           </Route>

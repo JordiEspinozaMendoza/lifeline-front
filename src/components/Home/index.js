@@ -6,6 +6,10 @@ export const Home = () => {
   return (
     <div className="Home">
       <div class="Botones">   
+          <Link to="/Profile">
+            <button> Profile </button>
+            </Link>
+            
             <Link to="/ambulances"> 
             <button> Ambulancias</button> </Link>
            
