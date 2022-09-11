@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./styles.sass"
-import Lifeline from "./Lifeline.png"
+import Lifeline from "./Lifeline2.png"
 export const Navbar2 = () => {
  
   return (

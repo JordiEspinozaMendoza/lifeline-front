@@ -43,7 +43,7 @@ export const Drivers = () => {
     <div className='drivers__'>
 
       <div className='drivers__left'>
-        <h2> Registration of drivers </h2>
+        <h2> Driver registration </h2>
       </div>
       <div className='drivers__right'>
         <form className='drivers__form' onSubmit={handleSubmit}>

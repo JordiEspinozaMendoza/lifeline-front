@@ -8,6 +8,7 @@ import {Home} from "./components/Home"
 import {Check} from "./components/Check"
 import { ActiveAmbulances } from './components/ActiveAmbuances'
 import {useEffect} from 'react'
+import { Patients } from './components/Patients'
 import "./App.css"
 
 
@@ -40,6 +41,10 @@ function App() {
           <Route exact path="/ambulances/active">
             <ActiveAmbulances/>
           </Route>
+          <Route exact path="/patients">
+            <Patients/>
+          </Route>
+
       </div>
     )
   }

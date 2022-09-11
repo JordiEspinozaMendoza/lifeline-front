@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import "./styles.sass"
-import Lifeline from "./Lifeline.png"
+import Lifeline from "./Lifeline2.png"
 
 
 export const Navbar = () => {
@@ -18,6 +18,9 @@ export const Navbar = () => {
 
             <Link to="/drivers">
             <button > Drivers </button></Link>
+
+            <Link to="/patients">
+            <button > Patients </button></Link>
 
             <Link to="/check">
             <button > Check </button></Link>

@@ -36,7 +36,7 @@ export const Ambulances = () => {
   return (
     <div class="Ambul">
       <div class="Ambul__left">
-      <h2> Discarge from Ambulances </h2>
+      <h2>Ambulance registration</h2>
       </div>
       <div className='Ambulancias_right'>
         <form className='ambulancias__form' onSubmit={handleSubmit}>
