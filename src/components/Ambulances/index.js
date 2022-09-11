@@ -34,9 +34,10 @@ export const Ambulances = () => {
     })
   }
   return (
-    <div class="Ambul">
-      <div class="Ambul__left">
-      <h2> Discarge from Ambulances </h2>
+    <div className="Ambul">
+      
+      <div className="Ambul__left">
+      <h2> Discharge ambulances </h2>
       </div>
       <div className='Ambulancias_right'>
         <form className='ambulancias__form' onSubmit={handleSubmit}>
