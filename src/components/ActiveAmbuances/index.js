@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import './styles.sass';
 
-const socket = io.connect("http://192.168.100.26:5051");
+const socket = io.connect("https://lifeline-socket.herokuapp.com/");
 
 
 export const ActiveAmbulances = () => {
@@ -35,7 +35,7 @@ export const ActiveAmbulances = () => {
     }
   }, [])
   return (
-    <div className='active__'>ActiveAmbulances
+    <div className='active__'>Active ambulances
       <table>
         <thead>
           <tr>

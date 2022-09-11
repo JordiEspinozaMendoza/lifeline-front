@@ -14,11 +14,11 @@ export const Profile = () => {
       <form className='Profile__form'>
         <label htmlFor='Email'>
           User's Email
-          <input type='text' id='email' name='email' placeholder='Example: "Hector.lucero@gmail.com"'/> 
+          <input type='text' id='email' name='email' placeholder='Example: "hector.lucero@gmail.com"'/> 
         </label>
         <label htmlFor='Password'>
           Password
-          <input type='text' id='Password' name='Password'placeholder='Example: "************"' />
+          <input type='password' id='Password' name='Password'placeholder='Example: "************"' />
         </label>
         <button type='submit'>
           Submit
