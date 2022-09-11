@@ -3,7 +3,6 @@ import {Navbar} from "./components/Navbar"
 import {Navbar2} from "./components/Navbar2"
 import {Ambulances} from "./components/Ambulances"
 import {Drivers} from "./components/Drivers"
-import {Prueba} from "./components/Prueba"
 import {Profile} from "./components/Profile"
 import {Home} from "./components/Home"
 import {Check} from "./components/Check"
@@ -35,9 +34,6 @@ function App() {
           </Route>
           <Route exact path="/drivers">
             <Drivers/>
-          </Route>
-          <Route exact path="/prueba">
-            <Prueba/>
           </Route>
           <Route exact path="/check">
             <Check/>
