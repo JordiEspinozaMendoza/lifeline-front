@@ -43,7 +43,7 @@ export const ActiveAmbulances = () => {
             <th>Socket</th>
             <th>Latitude</th>
             <th>Longitude</th>
-            <th>Eliminar</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -55,7 +55,7 @@ export const ActiveAmbulances = () => {
               <td>{ambulance?.location?.longitude}</td>
               <td><button onClick={() => {
                 socket.emit("delete__ambulance", ambulance?.socketId)
-              }}>Eliminar</button></td>
+              }}>Delete</button></td>
             </tr>
           ))}
         </tbody>
@@ -69,7 +69,7 @@ export const ActiveAmbulances = () => {
             <th>SocketId</th>
             <th>Latitude</th>
             <th>Longitude</th>
-            <th>Eliminar</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -82,7 +82,7 @@ export const ActiveAmbulances = () => {
               <td>{user?.location ? user?.location?.longitude : "No location"}</td> 
               <td><button onClick={() => {
                 socket.emit("delete__user", user?.socketId)
-              }}>Eliminar</button></td>
+              }}>Delete</button></td>
             </tr>
           ))}
         </tbody>
@@ -95,7 +95,7 @@ export const ActiveAmbulances = () => {
             <th>Ambulance</th>
             <th>Patient</th>
             <th>Status</th>
-            <th>Eliminar</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -107,7 +107,7 @@ export const ActiveAmbulances = () => {
               <td>{room?.status}</td>
               <td><button onClick={() => {
                 socket.emit("delete__room", room?.room)
-              }}>Eliminar</button></td>
+              }}>Delete</button></td>
             </tr>
           ))}
         </tbody>
