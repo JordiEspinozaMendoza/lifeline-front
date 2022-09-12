@@ -4,7 +4,9 @@ import React, { useState, useEffect } from 'react';
 import io from 'socket.io-client';
 import './styles.sass';
 
+
 const socket = io.connect("https://lifeline-socket.herokuapp.com/");
+
 
 
 export const ActiveAmbulances = () => {
@@ -34,8 +36,16 @@ export const ActiveAmbulances = () => {
       socket.off("all__rooms")
     }
   }, [])
+
   return (
-    <div className='active__'>Active ambulances
+    
+    <div className='active__'>
+      <span>
+        {socket.connected ? "Connected to server" : "Not connected to server"}
+      </span>
+      <p>
+      Active ambulances
+      </p> 
       <table>
         <thead>
           <tr>
@@ -60,7 +70,9 @@ export const ActiveAmbulances = () => {
           ))}
         </tbody>
       </table>
+      <p>
       Active users
+      </p>
       <table>
         <thead>
           <tr>
@@ -87,7 +99,9 @@ export const ActiveAmbulances = () => {
           ))}
         </tbody>
       </table>
+      <p>
       Active rooms
+      </p>
       <table>
         <thead>
           <tr>
